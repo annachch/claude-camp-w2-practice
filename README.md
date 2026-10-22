@@ -1,5 +1,5 @@
 # claude-camp-w2-practice
-Claude Camp 第二周练习：学员花名册管理器
+Claude Camp 第二周练习：学员花名册管理器与文本词频统计器
 # 学员花名册管理器
 
 一个适合 Python 初学者的命令行项目，使用字典存储学员信息，支持添加、查询和删除操作。
@@ -100,3 +100,33 @@ students = {
 - 支持修改学员信息
 - 显示全部学员
 - 使用学员编号区分同名学员
+
+## 文本词频统计器
+
+`word_counter.py` 接收一行英文文本，用字典记录每个单词的出现次数，忽略大小写，并按次数从高到低输出。
+
+运行方式：
+
+```bash
+python3 word_counter.py
+```
+
+例如输入：
+
+```text
+Hello Python! Hello world. I love python.
+```
+
+统计结果：
+
+```text
+hello: 2
+python: 2
+world: 1
+i: 1
+love: 1
+```
+
+次数相同的单词保持首次出现的顺序。空输入或没有英文单词时会给出提示。
+
+本练习只提取英文字母 a–z；数字和标点不计入单词，don't 会被拆分为 don 和 t，中文分词暂不支持。
